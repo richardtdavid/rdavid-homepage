@@ -12,7 +12,8 @@ import {
   menuList,
   MenuButton,
   IconButton,
-  useColorModeValue
+  useColorModeValue,
+  MenuList
 } from '@chakra-ui/react';
 
 import { HamburgerIcon, HumbergerIcon } from '@chakra-ui/icons';
@@ -82,6 +83,20 @@ const Navbar = props => {
                 variant="outlined"
                 aria-label="Options"
               />
+              <MenuList>
+                <NextLink href="/" passHref>
+                  <MenuItem as={Link}>About</MenuItem>
+                </NextLink>
+                <NextLink href="/works" passHref>
+                  <MenuItem as={Link}>Works</MenuItem>
+                </NextLink>
+                <NextLink href="/posts" passHref>
+                  <MenuItem as={Link}>Posts</MenuItem>
+                </NextLink>
+                <MenuItem as={Link} href="https://github.com/richardtdavid">
+                  View Source
+                </MenuItem>
+              </MenuList>
             </Menu>
           </Box>
         </Box>
